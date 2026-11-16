@@ -1,6 +1,16 @@
 import { Login, SignUp } from "./actions";
+import { auth } from "@/auth";
+import { connection } from "next/server";
+import { redirect } from "next/navigation";
 
-export default function LoginPage() {
+export const instant = false
+
+export default async function LoginPage() {
+  await connection();
+  const session = await auth();
+
+  if (session) redirect("/")
+
   return (
     <div style={{ maxWidth: 320, margin: "4rem auto" }}>
       <h1>Login / Sign up</h1>

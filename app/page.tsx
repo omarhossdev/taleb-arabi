@@ -1,6 +1,5 @@
 import { connection } from "next/server";
 import { auth, signOut } from "@/auth";
-import { redirect } from "next/navigation";
 
 export const instant = false
 
