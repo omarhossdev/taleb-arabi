@@ -13,9 +13,9 @@ export async function Login(formData: FormData) {
       password: formData.get("password"),
       redirectTo: "/"
     })
-  } catch (err) {
-    if (err instanceof AuthError) return { error: "Wrong username or password" }
-    throw error;
+  } catch (e) {
+    if (e instanceof AuthError) return { error: "Wrong username or password" }
+    throw e;
   }
 }
 
@@ -25,19 +25,22 @@ export async function SignUp(formData: FormData) {
 
   if (!username || !password) return { error: "Missing fields" }
 
-  const [existing] = await db
-    .select()
-    .from(users)
-    .where(eq(users.username, username));
+  try {
+    const [existing] = await db.select().from(users)
+      .where(eq(users.username, username));
 
-  if (existing) return { error: "Username taken" }
-
-  const hashedPassword = await bcrypt.hash(password, 10);
-  await db.insert(users).values({ username, hashedPassword });
+    if (existing) return { error: "Username taken" }
   
-  await signIn("credentials", {
-    username,
-    password,
-    redirectTo: "/",
-  })
+    const hashedPassword = await bcrypt.hash(password, 10);
+    await db.insert(users).values({ username, hashedPassword });
+    
+    await signIn("credentials", {
+      username,
+      password,
+      redirectTo: "/",
+    })
+  } catch (e) {
+    console.error("DB Error: ", e);
+    throw e;
+  }
 }

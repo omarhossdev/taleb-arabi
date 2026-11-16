@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "مذاكرة | يلا نبدأ مذاكرة و نخلص منهجنا",
-  description: "ذاكر و خلص منهجك مع منصة مذاكر",
+  title: "طالب ثانوي",
+  description: "ذاكر و خلص منهجك",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
