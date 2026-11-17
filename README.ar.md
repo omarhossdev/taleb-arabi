@@ -35,8 +35,9 @@
 - **الإطار (Framework):** [Next.js](https://nextjs.org) (App Router)
 - **لغة البرمجة:** [TypeScript](https://typescriptlang.org)
 - **التصميم:** [Tailwind CSS](https://tailwindcss.com) & [ShadCN UI](https://shadcn.com)
-- **قاعدة البيانات:** [Turso](https://turso.tech) (SQLite) & [Drizzle ORM](https://drizzle.team)
-- **التشغيل بدون انترنت:** [Dexie.js](https://dexie.org/)
+- **قاعدة البيانات:** [Turso](https://turso.tech) (SQLite - سحابة) & [Drizzle ORM](https://drizzle.team)
+- **التخزين محلياً:** [Dexie.js](https://dexie.org) (قاعدة بيانات محلية تعمل بدون إنترنت)
+- **التحقق من البيانات:** [Zod](https://zod.dev) (للتحقق الآمن من الأنواع والبيانات)
 
 ---
 
