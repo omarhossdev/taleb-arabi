@@ -1,17 +1,17 @@
 <div align="center">
 
-# 📚 Thanaweya Student — طالب ثانوية
+# 📚 Taleb-Arabi — طالب عربي
 
-**A free, open-source, offline-first study companion built for Egyptian Thanaweya Amma & Arab students 🇪🇬**
+**A free, open-source, offline-first study companion built for students across the Arab world 🌍**
 
-[العربية 🇪🇬](./README.ar.md) 
+[العربية 🇪🇬](./README.ar.md)  
 </div>
 
 ---
 
 ## 🌟 About The Project
 
-**Thanaweya Student (طالب ثانوية)** is an all-in-one smart study platform designed to take the stress out of high school (*Thanaweya Amma*). Built in relatable Egyptian Arabic with an accessible, distraction-free interface, it helps students organize their time, stay consistent, and track progress—even without an internet connection.
+**Taleb-Arabi (طالب عربي)** is an all-in-one smart study platform designed to take the stress out of school. Built with an accessible, distraction-free interface, it helps students organize their time, stay consistent, review flashcards, and track progress—even without an internet connection.
 
 > 🏆 *Developed in preparation for the **Egyptian State Award for Young Innovators 2027 (جائزة الدولة للمبدع الصغير)**.*
 
@@ -19,74 +19,61 @@
 
 ## ✨ Key Features
 
-* 🤖 **Smart AI Study Planner:** Powered by an open-source AI model to build personalized daily and weekly schedules around your sleep hours, private lessons, and free time—automatically prioritizing revision before exams while letting you edit manually.
-* ⚖️ **Smart Workload Balancing:** Splits chapters and homework evenly across the week so no single day feels overwhelming, sending proactive alerts like *"X days left until the exam and Chapter Y isn't finished yet."*
-* 🍅 **Built-in Pomodoro Timer:** Integrated focus and healthy break sessions synced directly with your scheduled subjects.
-* 📊 **Gamified Progress & Streaks:** Track daily focus sessions, maintain study streaks, and earn XP and badges.
-* 🏆 **Privacy-First Leaderboard:** Compete using only a username and XP—no public profiles, photos, or personal details exposed.
-* 📱 **Offline-First PWA:** Installable on any phone or desktop home screen with a single tap, keeping all core study tools functional offline.
-* 🔔 **Optional Telegram Reminders:** Connect to a free Telegram bot for schedule and exam notifications that you can customize or mute anytime.
-* 🇬🇧 **English Curriculum Spaced Repetition:** Memorize and review the full high school English vocabulary curriculum with smart daily spaced repetition.
-* 📝 **Manually Reviewed Summaries:** Access clean, handwritten study summaries reviewed for quality and copyright compliance with creator approval.
-* 📄 **Student Resource Blog:** Curated guides featuring free productivity apps and practical study tips.
+- 📅 **Custom Schedule:** Build your own personalized schedule, assign times for homework and lessons, and link tasks directly to your daily routine and focus sessions.
+- ✅ **Daily Tasks:** Easily view, edit, or check off tasks generated from your active schedule.
+- ⌚ **Focus Time:** Jump into a dedicated study tab focused on one subject at a time. Track your study hours, save time to the database, and see your remaining hours instantly.
+- 📝 **Manually Reviewed Summaries:** Access clean, handwritten study summaries reviewed personally for quality and copyright compliance with creator approval.
+- 🔔 **Optional Telegram Reminders:** Connect to a free Telegram bot for schedule and exam notifications that you can customize or mute anytime.
+- 🎴 **Smart Flashcards:** Add your own flashcards and English vocabulary, review them daily like Anki, and let the built-in robot voice read English words out loud for you.
+- 🔥 **Streak & Grade-Level Leaderboard:** Track daily study hours and earn XP! The leaderboard is safely split by grade levels (so Grade 2 students compete with Grade 2, not Grade 12), displaying usernames and XP only with **no personal data exposed**.
+- 📶 **Offline-First PWA:** Installable on any phone or desktop home screen with a single tap, keeping all core study tools functional offline.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Framework:** [Next.js](https://nextjs.org) (App Router)
-* **Language:** [TypeScript](https://typescriptlang.org)
-* **Styling & UI:** [Tailwind CSS](https://tailwindcss.com) & [ShadCN UI](https://shadcn.com)
-* **Database & ORM:** [Turso](https://turso.tech) (SQLite) & [Drizzle ORM](https://drizzle.team)
-* **AI & Inference:** [Hugging Face Spaces](https://huggingface.co) *(built with assistance from DeepSeek & Google Gemini)*
-* **Deployment:** [Vercel](https://vercel.com)
+- **Framework:** [Next.js](https://nextjs.org) (App Router)
+- **Language:** [TypeScript](https://typescriptlang.org)
+- **Styling & UI:** [Tailwind CSS](https://tailwindcss.com) & [ShadCN UI](https://shadcn.com)
+- **Database & ORM:** [Turso](https://turso.tech) (SQLite) & [Drizzle ORM](https://drizzle.team)
+- **Offline:** [Dexie.js](https://dexie.org/)
 
 ---
 
 ## 🚀 Getting Started
 
-To run a local copy of **Thanaweya Student**, follow these steps:
+To run a local copy of **Taleb-Arabi**, follow these steps:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/omarhossdev/thanaweya-student/
-   cd thanaweya-student
+   git clone [https://github.com/omarhossdev/taleb-arabi/](https://github.com/omarhossdev/taleb-arabi/)
+   cd taleb-arabi
    ```
-
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
-
+2. **Install dependencies:** `pnpm install`
 3. **Set up environment variables**
-   Create a `.env.local` file in the root directory and add your database and AI keys:
-   ```env
-   TURSO_DATABASE_URL=your_turso_url
-   TURSO_AUTH_TOKEN=your_turso_token
-   AUTH_SECRET=your_auth_secret
-   ```
-   you can generate `AUTH_SECRET` using `openssl rand -base64 32`
 
-4. **Push the database schema**
-   ```bash
-   pnpm db
-   ```
+Create a .env.local file in the root directory and add your database keys:
 
-5. **Start the development server**
-   ```bash
-   pnpm dev
-   ```
+```bash
+TURSO_DATABASE_URL=your_turso_url
+TURSO_AUTH_TOKEN=your_turso_token
+AUTH_SECRET=your_auth_secret
+```
+(You can generate an AUTH_SECRET using `openssl rand -base64 32`)
+
+4. **Push the database schema:** `pnpm db`
+5. **Start the development server:** `pnpm dev`
 
 ---
 
 ## 🤝 Contributing & License
 
-Issues, and feature requests are always welcome! Feel free to check the [issues page](https://github.com/omarhossdev/thanaweya-student/issues).
+Issues and feature requests are always welcome! Feel free to check the [issues](https://github.com/omarhossdev/taleb-arabi/issues) page.
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distributed under the **MIT License**. See LICENSE for more information.
 
 ---
 
 <div align="center">
-Made with ❤️ by <a href="https://github.com">Omar Hossam (omarhossdev)</a>
+   Made with ❤️ by <a href="https://github.com/omarhossdev">Omar Hossam (omarhossdev)</a>
 </div>
