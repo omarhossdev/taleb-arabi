@@ -44,7 +44,7 @@
 
 1. **استنساخ المستودع (Clone)**
    ```bash
-   git clone [https://github.com/omarhossdev/taleb-arabi/](https://github.com/omarhossdev/taleb-arabi/)
+   git clone https://github.com/omarhossdev/taleb-arabi/
    cd taleb-arabi
    ```
 2. **تثبيت المكتبات المطلوبة** `pnpm install`

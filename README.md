@@ -46,7 +46,7 @@ To run a local copy of **Taleb-Arabi**, follow these steps:
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/omarhossdev/taleb-arabi/](https://github.com/omarhossdev/taleb-arabi/)
+   git clone https://github.com/omarhossdev/taleb-arabi/
    cd taleb-arabi
    ```
 2. **Install dependencies:** `pnpm install`
