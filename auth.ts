@@ -36,5 +36,23 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
     }),
   ],
-  pages: { signIn: '/login' }
+  pages: { signIn: '/login' },
+
+  callbacks: {
+    async jwt({ token, user}) {
+      if (user) {
+        token.userId = user.id;
+      }
+
+      return token;
+    },
+    // so the dashboard can access session simply 
+    async session({ session, token }) {
+      if (session.user) {
+        session.user.id = token.userId as string;
+      }
+
+      return session;
+    }
+  },
 })

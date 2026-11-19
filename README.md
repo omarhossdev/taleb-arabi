@@ -35,8 +35,9 @@
 - **Framework:** [Next.js](https://nextjs.org) (App Router)
 - **Language:** [TypeScript](https://typescriptlang.org)
 - **Styling & UI:** [Tailwind CSS](https://tailwindcss.com) & [ShadCN UI](https://shadcn.com)
-- **Database & ORM:** [Turso](https://turso.tech) (SQLite) & [Drizzle ORM](https://drizzle.team)
-- **Offline:** [Dexie.js](https://dexie.org/)
+- **Database & ORM:** [Turso](https://turso.tech) (SQLite Cloud) & [Drizzle ORM](https://drizzle.team)
+- **State:** [Dexie.js](https://dexie.org) (Offline-first IndexedDB)
+- **Validation:** [Zod](https://zod.dev) (Type-safe schema validation)
 
 ---
 
