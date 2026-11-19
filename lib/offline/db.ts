@@ -1,20 +1,11 @@
-import "client-only";
+import "client-only"; // why?? because Dexie lives in the browser so no necessary to import server.
 import Dexie, { type EntityTable } from "dexie";
+import type { Schedule } from "@/features/schedule/types";
 
-export type LocalSchedule = {
-  id: string;
-  title: string;
-  startDate: string;
-  startTime: string;
-  endTime: string;
-  daysOfWeek: number[];
-  timezone: string;
-  isRecurring: boolean;
-  isActive: boolean;
-  createdAt: number;
-  updatedAt: number;
+export type LocalSchedule = Schedule & {
   syncStatus: "pending" | "synced";
-}
+  deletedAt: number | null;
+} 
 
 export class AppDatabase extends Dexie { // create our database class using Dexie
   schedules!: EntityTable<LocalSchedule, "id">; // define a table called schedules like in spreadsheet.

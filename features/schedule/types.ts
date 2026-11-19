@@ -9,7 +9,7 @@ export type Schedule = { // complete saved schedule.
   startDate: string;
   repeat: ScheduleRepeat;
 
-  // Saturday = 0, Friday = 6
+  // sunday = 0, saturday = 6
   daysOfWeek: number[];
 
   isActive: boolean;

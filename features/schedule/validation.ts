@@ -12,7 +12,7 @@ export const scheduleSchema = z
 
     repeat: z.enum(["once", "daily", "weekly"]),
 
-    daysOfWeek: z.array(z.number().int().min(0).max(6)), // 0 = Saturday, 6 = Friday (week system in Egypt)
+    daysOfWeek: z.array(z.number().int().min(0).max(6)), // 0 = Sunday, 6 = Saturday (week system in JavaScript)
 
   })
   .refine(
