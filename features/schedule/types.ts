@@ -18,16 +18,6 @@ export type Schedule = { // complete saved schedule.
   updatedAt: number;
 }
 
-const weekdays = [
-  "الأحد",
-  "الإثنين",
-  "الثلاثاء",
-  "الأربعاء",
-  "الخميس",
-  "الجمعة",
-  "السبت",
-];
-
 export type CreateScheduleInput = Omit< 
   Schedule,
   "id" | "isActive" | "createdAt" | "updatedAt"

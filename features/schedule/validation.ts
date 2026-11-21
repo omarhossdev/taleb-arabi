@@ -35,6 +35,13 @@ export const scheduleSchema = z
       message: "الأيام المحددة تستخدم مع التكرار الأسبوعي فقط",
       path: ["daysOfWeek"]
     }
+  )
+  .refine(
+    (data) => new Set(data.daysOfWeek).size === data.daysOfWeek.length,
+    {
+      message: "اليوم الاسبوعي لا يمكن ان يتم اختياره اكثر من مرة",
+      path: ["daysOfWeek"],
+    }
   );
 
 export type ValidatedSchedule = z.infer<typeof scheduleSchema>;

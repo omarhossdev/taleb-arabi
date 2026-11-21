@@ -8,6 +8,7 @@ const HomePage = () => {
     <>
       <h1>طالب ثانوي</h1>
       <a href="/login" className="bg-blue-600 p-3 m-6 text-2xl text-white">تسجيل الدخول</a>
+      <a href="/schedule">نظم وقتك</a>
     </>
   )
 }

@@ -82,3 +82,22 @@ export async function deleteSchedule(id: string): Promise<boolean> {
 
   return true;
 }
+
+
+export async function setScheduleActive(
+  id: string,
+  isActive: boolean
+): Promise<boolean> {
+  const existing = await getScheduleById(id);
+
+  if (!existing) return false;
+
+  await localDb.schedules.update(id, {
+    isActive,
+    updatedAt: Date.now(),
+    syncStatus: "pending",
+  });
+
+  return true;
+}
+
